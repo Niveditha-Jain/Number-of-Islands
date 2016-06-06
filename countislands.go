@@ -33,3 +33,21 @@ func convertMerge(Map [][]int, i int, j int) {
 	convertMerge(Map, i, j-1)
 	convertMerge(Map, i, j+1)
 }
+
+func main(){
+	rows := [][]int{}
+
+	row1 := []int{1, 1, 0, 0, 0}
+	row2 := []int{1, 1, 0, 0, 0}
+	row3 := []int{0, 0, 1, 0, 0}
+	row4 := []int{0, 0, 0, 1, 1}
+
+	rows = append(rows, row1)
+	rows = append(rows, row2)
+	rows = append(rows, row3)
+	rows = append(rows, row4)
+
+	fmt.Println(rows)
+
+	fmt.Println(countIslands(rows))
+}
